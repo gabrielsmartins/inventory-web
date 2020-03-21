@@ -1,0 +1,20 @@
+== Inventory Web image:https://ci.spring.io/api/v1/teams/spring-boot/pipelines/spring-boot-2.3.x/jobs/build/badge["Build Status", link="https://ci.spring.io/teams/spring-boot/pipelines/spring-boot-2.3.x?groups=Build"]
+
+This project is an extension from [Inventory-Core] using the approach of Package By Component and SpringBoot Framework with JDK 11.
+
+Somethings such as annotations are based on https://github.com/thombergs/buckpal/[Buckpal Project] from E-Book https://leanpub.com/get-your-hands-dirty-on-clean-architecture[Get Your Hands Dirty on Clean Architecture] and article https://octoperf.com/blog/2019/07/25/kraken-gradle-multi-project-builds-for-maven-users/[Gradle Multi-Project Builds for Maven Users]
+
+== Building
+This project was built using Gradle, so the standard task are required to build.
+
+[indent=0]
+----
+	$ ./gradlew build
+----
+
+== Modules
+There are another modules using this component:
+
+https://spring.io/[Inventory Core]
+https://spring.io/[Inventory MQ]
+

@@ -1,0 +1,50 @@
+apply plugin: 'java'
+apply plugin :  'io.spring.dependency-management'
+apply plugin : 'org.springframework.boot'
+
+group 'br.com.inventory.web'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 11
+
+
+buildscript{
+    repositories {
+        mavenCentral()
+    }
+    dependencies{
+        classpath 'io.spring.gradle:dependency-management-plugin:1.0.9.RELEASE'
+        classpath 'org.springframework.boot:spring-boot-gradle-plugin:2.2.5.RELEASE'
+    }
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+
+    implementation files('/home/gabriel/IdeaProjects/inventory-core/adapters/persistence/ebuild/libs/persistence-1.0.0-SNAPSHOT.jar')
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    testImplementation('org.springframework.boot:spring-boot-starter-test') {
+        exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
+    }
+
+    compileOnly 'org.projectlombok:lombok:1.18.12'
+    annotationProcessor 'org.projectlombok:lombok:1.18.12'
+
+    testCompileOnly 'org.projectlombok:lombok:1.18.12'
+    testAnnotationProcessor 'org.projectlombok:lombok:1.18.12'
+}
+
+dependencyManagement {
+    imports {
+        mavenBom('org.springframework.boot:spring-boot-dependencies:2.2.5.RELEASE')
+    }
+}
+
+test{
+    useJUnitPlatform()
+}
+
+

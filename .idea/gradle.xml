@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="GradleMigrationSettings" migrationVersion="1" />
+  <component name="GradleSettings">
+    <option name="linkedExternalProjectsSettings">
+      <GradleProjectSettings>
+        <option name="disableWrapperSourceDistributionNotification" value="true" />
+        <option name="distributionType" value="DEFAULT_WRAPPED" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/../inventory-core" />
+        <option name="gradleHome" value="/opt/gradle/gradle-6.1.1" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/../inventory-core" />
+            <option value="$PROJECT_DIR$/../inventory-core/adapters" />
+            <option value="$PROJECT_DIR$/../inventory-core/adapters/persistence" />
+            <option value="$PROJECT_DIR$/../inventory-core/application" />
+            <option value="$PROJECT_DIR$/../inventory-core/common" />
+          </set>
+        </option>
+        <option name="useQualifiedModuleNames" value="true" />
+      </GradleProjectSettings>
+      <GradleProjectSettings>
+        <option name="disableWrapperSourceDistributionNotification" value="true" />
+        <option name="distributionType" value="DEFAULT_WRAPPED" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="gradleHome" value="/opt/gradle/gradle-6.1.1" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$" />
+          </set>
+        </option>
+        <option name="useQualifiedModuleNames" value="true" />
+      </GradleProjectSettings>
+      <GradleProjectSettings>
+        <option name="distributionType" value="DEFAULT_WRAPPED" />
+        <option name="externalProjectPath" value="$USER_HOME$/Área de Trabalho/smartpayment-account" />
+        <option name="gradleHome" value="/opt/gradle/gradle-6.1.1" />
+        <option name="modules">
+          <set>
+            <option value="$USER_HOME$/Área de Trabalho/smartpayment-account" />
+            <option value="$USER_HOME$/Área de Trabalho/smartpayment-account/adapters" />
+            <option value="$USER_HOME$/Área de Trabalho/smartpayment-account/adapters/persistence" />
+            <option value="$USER_HOME$/Área de Trabalho/smartpayment-account/adapters/web" />
+            <option value="$USER_HOME$/Área de Trabalho/smartpayment-account/application" />
+            <option value="$USER_HOME$/Área de Trabalho/smartpayment-account/configuration" />
+          </set>
+        </option>
+        <option name="useQualifiedModuleNames" value="true" />
+      </GradleProjectSettings>
+    </option>
+  </component>
+</project>
