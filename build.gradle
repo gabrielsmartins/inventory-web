@@ -24,13 +24,11 @@ repositories {
 
 dependencies {
 
-    //implementation files('/home/gabriel/IdeaProjects/inventory-core/adapters/persistence/build/libs/persistence-1.0.0-SNAPSHOT.jar')
-    // implementation files('/home/gabriel/IdeaProjects/inventory-core/application/build/libs/application-1.0.0-SNAPSHOT.jar')
-    //implementation files('/home/gabriel/IdeaProjects/inventory-core/build/libs/inventory-core-1.0.0-SNAPSHOT.jar')
-   implementation files('/home/gabriel/IdeaProjects/inventory-core/build/libs/inventory-core-1.0.0-SNAPSHOT.jar')
-
+    implementation files('/home/gabriel/IdeaProjects/inventory-core/build/libs/inventory-core-1.0.0-SNAPSHOT.jar')
 
     implementation 'org.springframework.boot:spring-boot-starter-web'
+    implementation 'org.springframework.boot:spring-boot-devtools'
+    implementation 'org.springframework.boot:spring-boot-starter-actuator'
     testImplementation('org.springframework.boot:spring-boot-starter-test') {
         exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
     }

@@ -10,6 +10,7 @@ import br.com.inventory.web.mapper.ProductWebMapper;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.util.UriComponentsBuilder;
@@ -28,7 +29,7 @@ public class ProductController {
     private final ProductWebMapper productWebMapper;
 
     @PostMapping()
-    public ResponseEntity<?> create(@Valid ProductRequestDto productRequestDto, UriComponentsBuilder uriBuilder){
+    public ResponseEntity<?> create(@RequestBody  @Valid ProductRequestDto productRequestDto, UriComponentsBuilder uriBuilder){
         Product product = productWebMapper.mapToDomain(productRequestDto);
         Product createdProduct = createProductUseCase.create(product);
         ProductResponseDto productResponseDto = productWebMapper.mapToDto(createdProduct);
