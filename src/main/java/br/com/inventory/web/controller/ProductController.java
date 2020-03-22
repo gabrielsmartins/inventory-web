@@ -1,7 +1,9 @@
 package br.com.inventory.web.controller;
 
 
-
+import br.com.inventory.application.domain.Product;
+import br.com.inventory.application.ports.in.CreateProductUseCase;
+import br.com.inventory.common.annotations.WebAdapter;
 import br.com.inventory.web.dto.request.ProductRequestDto;
 import br.com.inventory.web.dto.response.ProductResponseDto;
 import br.com.inventory.web.mapper.ProductWebMapper;
