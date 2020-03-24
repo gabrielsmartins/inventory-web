@@ -1,13 +1,26 @@
 package br.com.inventory.web.dto.response;
 
+
+
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Getter;
-import lombok.RequiredArgsConstructor;
+import lombok.Setter;
+
+import java.math.BigDecimal;
 
 @Getter
-@RequiredArgsConstructor
+@Setter
 public class ProductResponseDto {
 
     @JsonProperty("id")
-    private final Long id;
+    private  Long id;
+
+    @JsonProperty("description")
+    private String description;
+
+    @JsonProperty("type")
+    private String type;
+
+    @JsonProperty("amount")
+    private BigDecimal amount;
 }

@@ -19,6 +19,11 @@ public class ProductWebMapper {
     }
 
     public ProductResponseDto mapToDto(Product product) {
-        return new ProductResponseDto(product.getId());
+        ProductResponseDto productResponseDto = new ProductResponseDto();
+        productResponseDto.setId(product.getId());
+        productResponseDto.setDescription(product.getDescription());
+        productResponseDto.setAmount(product.getAmount());
+        productResponseDto.setType(product.getType().name());
+        return productResponseDto;
     }
 }
