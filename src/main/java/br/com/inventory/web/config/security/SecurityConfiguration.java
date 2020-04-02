@@ -40,7 +40,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 				.antMatchers(HttpMethod.GET, "/topicos").permitAll()
 				.antMatchers(HttpMethod.GET, "/topicos/*").permitAll()
 				.antMatchers(HttpMethod.GET, "/h2-console/**").permitAll()
-				.anyRequest().authenticated().and().csrf().disable().sessionManagement()
+				.anyRequest().permitAll().and().csrf().disable().sessionManagement()
 				.sessionCreationPolicy(SessionCreationPolicy.STATELESS).and()
 				.addFilterBefore(new JwtTokenFilter(tokenService), UsernamePasswordAuthenticationFilter.class);
 	}
