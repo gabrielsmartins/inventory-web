@@ -50,8 +50,8 @@
                 <pattern>
                     <pattern>
                         {
+                        "application": "${springAppName:-}",
                         "severity": "%level",
-                        "service": "${springAppName:-}",
                         "trace": "%X{X-B3-TraceId:-}",
                         "span": "%X{X-B3-SpanId:-}",
                         "parent": "%X{X-B3-ParentSpanId:-}",
@@ -59,8 +59,11 @@
                         "baggage": "%X{key:-}",
                         "pid": "${PID:-}",
                         "thread": "%thread",
-                        "class": "%logger{40}",
-                        "rest": "%message"
+                        "class": "%class",
+                        "method": "%method",
+                        "line": "%line",
+                        "file": "%file",
+                        "message": "%message"
                         }
                     </pattern>
                 </pattern>

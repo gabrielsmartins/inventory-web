@@ -1,63 +1,297 @@
-2020-04-01 22:17:47.318  INFO [inventory-web,,,] 29696 --- [  restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2020-04-01 22:17:47.771  INFO [inventory-web,,,] 29696 --- [  restartedMain] b.c.i.web.InventoryWebApplication        : No active profile set, falling back to default profiles: default
-2020-04-01 22:17:48.621  INFO [inventory-web,,,] 29696 --- [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2020-04-01 22:17:48.704  INFO [inventory-web,,,] 29696 --- [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 74ms. Found 1 JPA repository interfaces.
-2020-04-01 22:17:49.371  INFO [inventory-web,,,] 29696 --- [  restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=940f8fde-d86b-3b0f-88bb-c8fa2970f351
-2020-04-01 22:17:50.583  INFO [inventory-web,,,] 29696 --- [  restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2020-04-01 22:17:50.596  INFO [inventory-web,,,] 29696 --- [  restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2020-04-01 22:17:50.597  INFO [inventory-web,,,] 29696 --- [  restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.33]
-2020-04-01 22:17:50.704  INFO [inventory-web,,,] 29696 --- [  restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2020-04-01 22:17:50.704  INFO [inventory-web,,,] 29696 --- [  restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2898 ms
-2020-04-01 22:17:50.987  INFO [inventory-web,,,] 29696 --- [  restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2020-04-01 22:17:51.140  INFO [inventory-web,,,] 29696 --- [  restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2020-04-01 22:17:51.150  INFO [inventory-web,,,] 29696 --- [  restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
-2020-04-01 22:17:51.890  INFO [inventory-web,,,] 29696 --- [  restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2020-04-01 22:17:51.961  INFO [inventory-web,,,] 29696 --- [  restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 1.0.0-SNAPSHOT
-2020-04-01 22:17:52.103  INFO [inventory-web,,,] 29696 --- [  restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
-2020-04-01 22:17:52.234  INFO [inventory-web,,,] 29696 --- [  restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
-2020-04-01 22:17:52.934  INFO [inventory-web,,,] 29696 --- [  restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2020-04-01 22:17:52.943  INFO [inventory-web,,,] 29696 --- [  restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2020-04-01 22:17:52.999  INFO [inventory-web,,,] 29696 --- [  restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2020-04-01 22:17:53.091  WARN [inventory-web,,,] 29696 --- [  restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2020-04-01 22:17:53.769  INFO [inventory-web,,,] 29696 --- [  restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/actuator/**'], []
-2020-04-01 22:17:53.770  INFO [inventory-web,,,] 29696 --- [  restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/swagger-ui/**', GET], []
-2020-04-01 22:17:53.770  INFO [inventory-web,,,] 29696 --- [  restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/topicos', GET], []
-2020-04-01 22:17:53.771  INFO [inventory-web,,,] 29696 --- [  restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/topicos/*', GET], []
-2020-04-01 22:17:53.771  INFO [inventory-web,,,] 29696 --- [  restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/h2-console/**', GET], []
-2020-04-01 22:17:53.771  INFO [inventory-web,,,] 29696 --- [  restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/**.html'], []
-2020-04-01 22:17:53.772  INFO [inventory-web,,,] 29696 --- [  restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/v2/api-docs'], []
-2020-04-01 22:17:53.772  INFO [inventory-web,,,] 29696 --- [  restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/webjars/**'], []
-2020-04-01 22:17:53.773  INFO [inventory-web,,,] 29696 --- [  restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/configuration/**'], []
-2020-04-01 22:17:53.773  INFO [inventory-web,,,] 29696 --- [  restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/swagger-resources/**'], []
-2020-04-01 22:17:53.831  INFO [inventory-web,,,] 29696 --- [  restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@55947193, org.springframework.security.web.context.SecurityContextPersistenceFilter@24dec06d, org.springframework.security.web.header.HeaderWriterFilter@1f0f4921, org.springframework.security.web.authentication.logout.LogoutFilter@6dabfa5a, br.com.inventory.web.config.security.JwtTokenFilter@4dcc0303, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@5b27b9fd, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@6331088e, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@28cb97cd, org.springframework.security.web.session.SessionManagementFilter@451cda01, org.springframework.security.web.access.ExceptionTranslationFilter@78df7ac6, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@606020a5]
-2020-04-01 22:17:54.166  INFO [inventory-web,,,] 29696 --- [  restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2020-04-01 22:17:54.959  INFO [inventory-web,,,] 29696 --- [  restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoint(s) beneath base path '/actuator'
-2020-04-01 22:17:55.060  INFO [inventory-web,,,] 29696 --- [  restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2020-04-01 22:17:55.092  INFO [inventory-web,,,] 29696 --- [  restartedMain] b.c.i.web.InventoryWebApplication        : Started InventoryWebApplication in 8.763 seconds (JVM running for 9.392)
-2020-04-01 22:17:59.887  INFO [inventory-web,,,] 29696 --- [nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2020-04-01 22:17:59.888  INFO [inventory-web,,,] 29696 --- [nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2020-04-01 22:17:59.916  INFO [inventory-web,,,] 29696 --- [nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 27 ms
-2020-04-01 22:17:59.942  INFO [inventory-web,be57b8ee36aa69b0,be57b8ee36aa69b0,false] 29696 --- [nio-8080-exec-2] b.c.i.w.config.security.JwtTokenFilter   : Validando Token ...
-2020-04-01 22:18:00.001  INFO [inventory-web,be57b8ee36aa69b0,be57b8ee36aa69b0,false] 29696 --- [nio-8080-exec-2] b.c.i.web.controller.ProductController   : New Request ... Headers=[user-agent:"PostmanRuntime/7.24.0", accept:"*/*", postman-token:"467e0947-c1e6-4dbd-aff7-76267ea5f768", host:"localhost:8080", accept-encoding:"gzip, deflate, br", connection:"keep-alive"], PathVariable=[user-agent:"PostmanRuntime/7.24.0", accept:"*/*", postman-token:"467e0947-c1e6-4dbd-aff7-76267ea5f768", host:"localhost:8080", accept-encoding:"gzip, deflate, br", connection:"keep-alive"]
-2020-04-01 22:18:00.002  INFO [inventory-web,be57b8ee36aa69b0,be57b8ee36aa69b0,false] 29696 --- [nio-8080-exec-2] b.c.i.web.controller.ProductController   : Search for Product ...
-2020-04-01 22:18:00.046  WARN [inventory-web,be57b8ee36aa69b0,be57b8ee36aa69b0,false] 29696 --- [nio-8080-exec-2] b.c.i.web.controller.ProductController   : Product 1 not found ...
-2020-04-01 22:18:01.893  INFO [inventory-web,83ab0853ce11c955,83ab0853ce11c955,false] 29696 --- [nio-8080-exec-3] b.c.i.w.config.security.JwtTokenFilter   : Validando Token ...
-2020-04-01 22:18:01.943  INFO [inventory-web,83ab0853ce11c955,83ab0853ce11c955,false] 29696 --- [nio-8080-exec-3] b.c.i.web.controller.ProductController   : New Request ... Headers=[content-type:"application/json", user-agent:"PostmanRuntime/7.24.0", accept:"*/*", postman-token:"43596fce-9385-4ea2-9701-6660c4480ab7", host:"localhost:8080", accept-encoding:"gzip, deflate, br", connection:"keep-alive", content-length:"79"], Body=ProductRequestDto(description=Galaxy A70, type=ELECTRONICS, amount=1500.50)
-2020-04-01 22:18:01.954  INFO [inventory-web,83ab0853ce11c955,83ab0853ce11c955,false] 29696 --- [nio-8080-exec-3] b.c.i.web.controller.ProductController   : Mapping Request...
-2020-04-01 22:18:01.955  INFO [inventory-web,83ab0853ce11c955,83ab0853ce11c955,false] 29696 --- [nio-8080-exec-3] b.c.i.web.controller.ProductController   : Request was mapped successfully ... Product(id=null, description=Galaxy A70, type=ELECTRONICS, amount=1500.50)
-2020-04-01 22:18:01.973  INFO [inventory-web,83ab0853ce11c955,83ab0853ce11c955,false] 29696 --- [nio-8080-exec-3] b.c.i.web.controller.ProductController   : Creating Product ...
-2020-04-01 22:18:02.005  INFO [inventory-web,83ab0853ce11c955,83ab0853ce11c955,false] 29696 --- [nio-8080-exec-3] b.c.i.web.controller.ProductController   : Product was created successfully ...
-2020-04-01 22:18:02.006  INFO [inventory-web,83ab0853ce11c955,83ab0853ce11c955,false] 29696 --- [nio-8080-exec-3] b.c.i.web.controller.ProductController   : Mapping Response ...
-2020-04-01 22:18:02.006  INFO [inventory-web,83ab0853ce11c955,83ab0853ce11c955,false] 29696 --- [nio-8080-exec-3] b.c.i.web.controller.ProductController   : Response was mapped successfully ... ProductResponseDto(id=1, description=Galaxy A70, type=ELECTRONICS, amount=1500.50)
-2020-04-01 22:18:03.607  INFO [inventory-web,2cd4b80b471935e3,2cd4b80b471935e3,false] 29696 --- [nio-8080-exec-4] b.c.i.w.config.security.JwtTokenFilter   : Validando Token ...
-2020-04-01 22:18:03.609  INFO [inventory-web,2cd4b80b471935e3,2cd4b80b471935e3,false] 29696 --- [nio-8080-exec-4] b.c.i.web.controller.ProductController   : New Request ... Headers=[user-agent:"PostmanRuntime/7.24.0", accept:"*/*", postman-token:"1edff01f-7248-464b-b8ff-37247e5a4054", host:"localhost:8080", accept-encoding:"gzip, deflate, br", connection:"keep-alive"], PathVariable=[user-agent:"PostmanRuntime/7.24.0", accept:"*/*", postman-token:"1edff01f-7248-464b-b8ff-37247e5a4054", host:"localhost:8080", accept-encoding:"gzip, deflate, br", connection:"keep-alive"]
-2020-04-01 22:18:03.610  INFO [inventory-web,2cd4b80b471935e3,2cd4b80b471935e3,false] 29696 --- [nio-8080-exec-4] b.c.i.web.controller.ProductController   : Search for Product ...
-2020-04-01 22:18:03.621  WARN [inventory-web,2cd4b80b471935e3,2cd4b80b471935e3,false] 29696 --- [nio-8080-exec-4] b.c.i.web.controller.ProductController   : Product 1 found ...
-2020-04-01 22:18:03.622  INFO [inventory-web,2cd4b80b471935e3,2cd4b80b471935e3,false] 29696 --- [nio-8080-exec-4] b.c.i.web.controller.ProductController   : Mapping Response ...
-2020-04-01 22:18:03.623  INFO [inventory-web,2cd4b80b471935e3,2cd4b80b471935e3,false] 29696 --- [nio-8080-exec-4] b.c.i.web.controller.ProductController   : Response was mapped successfully ... ProductResponseDto(id=1, description=Galaxy A70, type=ELECTRONICS, amount=1500.50)
-2020-04-01 22:19:41.616  INFO [inventory-web,,,] 29696 --- [extShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
-2020-04-01 22:19:41.623  INFO [inventory-web,,,] 29696 --- [extShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2020-04-01 22:19:41.625  INFO [inventory-web,,,] 29696 --- [extShutdownHook] .SchemaDropperImpl$DelayedDropActionImpl : HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
-2020-04-01 22:19:41.895  WARN [inventory-web,,,] 29696 --- [extShutdownHook] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-200]
-2020-04-01 22:19:41.897  INFO [inventory-web,,,] 29696 --- [extShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2020-04-01 22:19:41.901  INFO [inventory-web,,,] 29696 --- [extShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2020-04-02 21:06:28.062 ERROR [inventory-web,,,] 635 --- [  restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+java.lang.IllegalStateException: Logback configuration error detected: 
+ERROR in net.logstash.logback.composite.loggingevent.LoggingEventPatternJsonProvider@7b9abd6e - Failed to parse pattern [{
+                        "application": "inventory-web",
+                        "severity": "%level",
+                        "trace": "%X{X-B3-TraceId:-}",
+                        "span": "%X{X-B3-SpanId:-}",
+                        "parent": "%X{X-B3-ParentSpanId:-}",
+                        "exportable": "%X{X-Span-Export:-}",
+                        "baggage": "%X{key:-}",
+                        "pid": "635",
+                        "thread": "%thread",
+                        "class": "%class",
+                        "method": "%method",
+                        "line": "%line",
+                        "file": "%file",
+                        "elapsed_time": "%elapsed_time}",
+                        "message": "%message"] com.fasterxml.jackson.core.io.JsonEOFException: Unexpected end-of-input: expected close marker for Object (start marker at [Source: (String)"{
+                        "application": "inventory-web",
+                        "severity": "%level",
+                        "trace": "%X{X-B3-TraceId:-}",
+                        "span": "%X{X-B3-SpanId:-}",
+                        "parent": "%X{X-B3-ParentSpanId:-}",
+                        "exportable": "%X{X-Span-Export:-}",
+                        "baggage": "%X{key:-}",
+                        "pid": "635",
+                        "thread": "%thread",
+                        "class": "%"[truncated 238 chars]; line: 1, column: 1])
+ at [Source: (String)"{
+                        "application": "inventory-web",
+                        "severity": "%level",
+                        "trace": "%X{X-B3-TraceId:-}",
+                        "span": "%X{X-B3-SpanId:-}",
+                        "parent": "%X{X-B3-ParentSpanId:-}",
+                        "exportable": "%X{X-Span-Export:-}",
+                        "baggage": "%X{key:-}",
+                        "pid": "635",
+                        "thread": "%thread",
+                        "class": "%"[truncated 238 chars]; line: 16, column: 46]
+	at org.springframework.boot.logging.logback.LogbackLoggingSystem.loadConfiguration(LogbackLoggingSystem.java:169)
+	at org.springframework.boot.logging.AbstractLoggingSystem.initializeWithConventions(AbstractLoggingSystem.java:80)
+	at org.springframework.boot.logging.AbstractLoggingSystem.initialize(AbstractLoggingSystem.java:60)
+	at org.springframework.boot.logging.logback.LogbackLoggingSystem.initialize(LogbackLoggingSystem.java:118)
+	at org.springframework.boot.context.logging.LoggingApplicationListener.initializeSystem(LoggingApplicationListener.java:313)
+	at org.springframework.boot.context.logging.LoggingApplicationListener.initialize(LoggingApplicationListener.java:288)
+	at org.springframework.boot.context.logging.LoggingApplicationListener.onApplicationEnvironmentPreparedEvent(LoggingApplicationListener.java:246)
+	at org.springframework.boot.context.logging.LoggingApplicationListener.onApplicationEvent(LoggingApplicationListener.java:223)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:172)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:165)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:139)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:127)
+	at org.springframework.boot.context.event.EventPublishingRunListener.environmentPrepared(EventPublishingRunListener.java:76)
+	at org.springframework.boot.SpringApplicationRunListeners.environmentPrepared(SpringApplicationRunListeners.java:53)
+	at org.springframework.boot.SpringApplication.prepareEnvironment(SpringApplication.java:345)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308)
+	at org.springframework.boot.builder.SpringApplicationBuilder.run(SpringApplicationBuilder.java:140)
+	at org.springframework.cloud.bootstrap.BootstrapApplicationListener.bootstrapServiceContext(BootstrapApplicationListener.java:212)
+	at org.springframework.cloud.bootstrap.BootstrapApplicationListener.onApplicationEvent(BootstrapApplicationListener.java:117)
+	at org.springframework.cloud.bootstrap.BootstrapApplicationListener.onApplicationEvent(BootstrapApplicationListener.java:74)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:172)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:165)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:139)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:127)
+	at org.springframework.boot.context.event.EventPublishingRunListener.environmentPrepared(EventPublishingRunListener.java:76)
+	at org.springframework.boot.SpringApplicationRunListeners.environmentPrepared(SpringApplicationRunListeners.java:53)
+	at org.springframework.boot.SpringApplication.prepareEnvironment(SpringApplication.java:345)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1215)
+	at br.com.inventory.web.InventoryWebApplication.main(InventoryWebApplication.java:16)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+
+2020-04-02 21:06:28.083 ERROR [inventory-web,,,] 635 --- [  restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+java.lang.IllegalStateException: Logback configuration error detected: 
+ERROR in net.logstash.logback.composite.loggingevent.LoggingEventPatternJsonProvider@7b9abd6e - Failed to parse pattern [{
+                        "application": "inventory-web",
+                        "severity": "%level",
+                        "trace": "%X{X-B3-TraceId:-}",
+                        "span": "%X{X-B3-SpanId:-}",
+                        "parent": "%X{X-B3-ParentSpanId:-}",
+                        "exportable": "%X{X-Span-Export:-}",
+                        "baggage": "%X{key:-}",
+                        "pid": "635",
+                        "thread": "%thread",
+                        "class": "%class",
+                        "method": "%method",
+                        "line": "%line",
+                        "file": "%file",
+                        "elapsed_time": "%elapsed_time}",
+                        "message": "%message"] com.fasterxml.jackson.core.io.JsonEOFException: Unexpected end-of-input: expected close marker for Object (start marker at [Source: (String)"{
+                        "application": "inventory-web",
+                        "severity": "%level",
+                        "trace": "%X{X-B3-TraceId:-}",
+                        "span": "%X{X-B3-SpanId:-}",
+                        "parent": "%X{X-B3-ParentSpanId:-}",
+                        "exportable": "%X{X-Span-Export:-}",
+                        "baggage": "%X{key:-}",
+                        "pid": "635",
+                        "thread": "%thread",
+                        "class": "%"[truncated 238 chars]; line: 1, column: 1])
+ at [Source: (String)"{
+                        "application": "inventory-web",
+                        "severity": "%level",
+                        "trace": "%X{X-B3-TraceId:-}",
+                        "span": "%X{X-B3-SpanId:-}",
+                        "parent": "%X{X-B3-ParentSpanId:-}",
+                        "exportable": "%X{X-Span-Export:-}",
+                        "baggage": "%X{key:-}",
+                        "pid": "635",
+                        "thread": "%thread",
+                        "class": "%"[truncated 238 chars]; line: 16, column: 46]
+	at org.springframework.boot.logging.logback.LogbackLoggingSystem.loadConfiguration(LogbackLoggingSystem.java:169)
+	at org.springframework.boot.logging.AbstractLoggingSystem.initializeWithConventions(AbstractLoggingSystem.java:80)
+	at org.springframework.boot.logging.AbstractLoggingSystem.initialize(AbstractLoggingSystem.java:60)
+	at org.springframework.boot.logging.logback.LogbackLoggingSystem.initialize(LogbackLoggingSystem.java:118)
+	at org.springframework.boot.context.logging.LoggingApplicationListener.initializeSystem(LoggingApplicationListener.java:313)
+	at org.springframework.boot.context.logging.LoggingApplicationListener.initialize(LoggingApplicationListener.java:288)
+	at org.springframework.boot.context.logging.LoggingApplicationListener.onApplicationEnvironmentPreparedEvent(LoggingApplicationListener.java:246)
+	at org.springframework.boot.context.logging.LoggingApplicationListener.onApplicationEvent(LoggingApplicationListener.java:223)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:172)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:165)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:139)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:127)
+	at org.springframework.boot.context.event.EventPublishingRunListener.environmentPrepared(EventPublishingRunListener.java:76)
+	at org.springframework.boot.SpringApplicationRunListeners.environmentPrepared(SpringApplicationRunListeners.java:53)
+	at org.springframework.boot.SpringApplication.prepareEnvironment(SpringApplication.java:345)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308)
+	at org.springframework.boot.builder.SpringApplicationBuilder.run(SpringApplicationBuilder.java:140)
+	at org.springframework.cloud.bootstrap.BootstrapApplicationListener.bootstrapServiceContext(BootstrapApplicationListener.java:212)
+	at org.springframework.cloud.bootstrap.BootstrapApplicationListener.onApplicationEvent(BootstrapApplicationListener.java:117)
+	at org.springframework.cloud.bootstrap.BootstrapApplicationListener.onApplicationEvent(BootstrapApplicationListener.java:74)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:172)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:165)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:139)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:127)
+	at org.springframework.boot.context.event.EventPublishingRunListener.environmentPrepared(EventPublishingRunListener.java:76)
+	at org.springframework.boot.SpringApplicationRunListeners.environmentPrepared(SpringApplicationRunListeners.java:53)
+	at org.springframework.boot.SpringApplication.prepareEnvironment(SpringApplication.java:345)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1215)
+	at br.com.inventory.web.InventoryWebApplication.main(InventoryWebApplication.java:16)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+
+2020-04-02 21:06:57.837 ERROR [inventory-web,,,] 708 --- [  restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+java.lang.IllegalStateException: Logback configuration error detected: 
+ERROR in ch.qos.logback.core.pattern.parser.Compiler@7b49696d - There is no conversion class registered for conversion word [elapsed_time]
+ERROR in ch.qos.logback.core.pattern.parser.Compiler@7b49696d - [elapsed_time] is not a valid conversion word
+	at org.springframework.boot.logging.logback.LogbackLoggingSystem.loadConfiguration(LogbackLoggingSystem.java:169)
+	at org.springframework.boot.logging.AbstractLoggingSystem.initializeWithConventions(AbstractLoggingSystem.java:80)
+	at org.springframework.boot.logging.AbstractLoggingSystem.initialize(AbstractLoggingSystem.java:60)
+	at org.springframework.boot.logging.logback.LogbackLoggingSystem.initialize(LogbackLoggingSystem.java:118)
+	at org.springframework.boot.context.logging.LoggingApplicationListener.initializeSystem(LoggingApplicationListener.java:313)
+	at org.springframework.boot.context.logging.LoggingApplicationListener.initialize(LoggingApplicationListener.java:288)
+	at org.springframework.boot.context.logging.LoggingApplicationListener.onApplicationEnvironmentPreparedEvent(LoggingApplicationListener.java:246)
+	at org.springframework.boot.context.logging.LoggingApplicationListener.onApplicationEvent(LoggingApplicationListener.java:223)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:172)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:165)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:139)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:127)
+	at org.springframework.boot.context.event.EventPublishingRunListener.environmentPrepared(EventPublishingRunListener.java:76)
+	at org.springframework.boot.SpringApplicationRunListeners.environmentPrepared(SpringApplicationRunListeners.java:53)
+	at org.springframework.boot.SpringApplication.prepareEnvironment(SpringApplication.java:345)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308)
+	at org.springframework.boot.builder.SpringApplicationBuilder.run(SpringApplicationBuilder.java:140)
+	at org.springframework.cloud.bootstrap.BootstrapApplicationListener.bootstrapServiceContext(BootstrapApplicationListener.java:212)
+	at org.springframework.cloud.bootstrap.BootstrapApplicationListener.onApplicationEvent(BootstrapApplicationListener.java:117)
+	at org.springframework.cloud.bootstrap.BootstrapApplicationListener.onApplicationEvent(BootstrapApplicationListener.java:74)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:172)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:165)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:139)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:127)
+	at org.springframework.boot.context.event.EventPublishingRunListener.environmentPrepared(EventPublishingRunListener.java:76)
+	at org.springframework.boot.SpringApplicationRunListeners.environmentPrepared(SpringApplicationRunListeners.java:53)
+	at org.springframework.boot.SpringApplication.prepareEnvironment(SpringApplication.java:345)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1215)
+	at br.com.inventory.web.InventoryWebApplication.main(InventoryWebApplication.java:16)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+
+2020-04-02 21:06:57.848 ERROR [inventory-web,,,] 708 --- [  restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+java.lang.IllegalStateException: Logback configuration error detected: 
+ERROR in ch.qos.logback.core.pattern.parser.Compiler@7b49696d - There is no conversion class registered for conversion word [elapsed_time]
+ERROR in ch.qos.logback.core.pattern.parser.Compiler@7b49696d - [elapsed_time] is not a valid conversion word
+	at org.springframework.boot.logging.logback.LogbackLoggingSystem.loadConfiguration(LogbackLoggingSystem.java:169)
+	at org.springframework.boot.logging.AbstractLoggingSystem.initializeWithConventions(AbstractLoggingSystem.java:80)
+	at org.springframework.boot.logging.AbstractLoggingSystem.initialize(AbstractLoggingSystem.java:60)
+	at org.springframework.boot.logging.logback.LogbackLoggingSystem.initialize(LogbackLoggingSystem.java:118)
+	at org.springframework.boot.context.logging.LoggingApplicationListener.initializeSystem(LoggingApplicationListener.java:313)
+	at org.springframework.boot.context.logging.LoggingApplicationListener.initialize(LoggingApplicationListener.java:288)
+	at org.springframework.boot.context.logging.LoggingApplicationListener.onApplicationEnvironmentPreparedEvent(LoggingApplicationListener.java:246)
+	at org.springframework.boot.context.logging.LoggingApplicationListener.onApplicationEvent(LoggingApplicationListener.java:223)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:172)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:165)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:139)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:127)
+	at org.springframework.boot.context.event.EventPublishingRunListener.environmentPrepared(EventPublishingRunListener.java:76)
+	at org.springframework.boot.SpringApplicationRunListeners.environmentPrepared(SpringApplicationRunListeners.java:53)
+	at org.springframework.boot.SpringApplication.prepareEnvironment(SpringApplication.java:345)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308)
+	at org.springframework.boot.builder.SpringApplicationBuilder.run(SpringApplicationBuilder.java:140)
+	at org.springframework.cloud.bootstrap.BootstrapApplicationListener.bootstrapServiceContext(BootstrapApplicationListener.java:212)
+	at org.springframework.cloud.bootstrap.BootstrapApplicationListener.onApplicationEvent(BootstrapApplicationListener.java:117)
+	at org.springframework.cloud.bootstrap.BootstrapApplicationListener.onApplicationEvent(BootstrapApplicationListener.java:74)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:172)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:165)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:139)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:127)
+	at org.springframework.boot.context.event.EventPublishingRunListener.environmentPrepared(EventPublishingRunListener.java:76)
+	at org.springframework.boot.SpringApplicationRunListeners.environmentPrepared(SpringApplicationRunListeners.java:53)
+	at org.springframework.boot.SpringApplication.prepareEnvironment(SpringApplication.java:345)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1215)
+	at br.com.inventory.web.InventoryWebApplication.main(InventoryWebApplication.java:16)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+
+2020-04-02 21:07:31.300  INFO [inventory-web,,,] 770 --- [  restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-04-02 21:07:31.690  INFO [inventory-web,,,] 770 --- [  restartedMain] b.c.i.web.InventoryWebApplication        : No active profile set, falling back to default profiles: default
+2020-04-02 21:07:32.409  INFO [inventory-web,,,] 770 --- [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-04-02 21:07:32.491  INFO [inventory-web,,,] 770 --- [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 74ms. Found 1 JPA repository interfaces.
+2020-04-02 21:07:33.125  INFO [inventory-web,,,] 770 --- [  restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=940f8fde-d86b-3b0f-88bb-c8fa2970f351
+2020-04-02 21:07:34.223  INFO [inventory-web,,,] 770 --- [  restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-04-02 21:07:34.234  INFO [inventory-web,,,] 770 --- [  restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-04-02 21:07:34.235  INFO [inventory-web,,,] 770 --- [  restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.33]
+2020-04-02 21:07:34.326  INFO [inventory-web,,,] 770 --- [  restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-04-02 21:07:34.327  INFO [inventory-web,,,] 770 --- [  restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2607 ms
+2020-04-02 21:07:34.552  INFO [inventory-web,,,] 770 --- [  restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-04-02 21:07:34.766  INFO [inventory-web,,,] 770 --- [  restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-04-02 21:07:34.775  INFO [inventory-web,,,] 770 --- [  restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+2020-04-02 21:07:35.329  INFO [inventory-web,,,] 770 --- [  restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-04-02 21:07:35.396  INFO [inventory-web,,,] 770 --- [  restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 1.0.0-SNAPSHOT
+2020-04-02 21:07:35.529  INFO [inventory-web,,,] 770 --- [  restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-04-02 21:07:35.654  INFO [inventory-web,,,] 770 --- [  restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2020-04-02 21:07:36.388  INFO [inventory-web,,,] 770 --- [  restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-04-02 21:07:36.397  INFO [inventory-web,,,] 770 --- [  restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-04-02 21:07:36.446  INFO [inventory-web,,,] 770 --- [  restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-04-02 21:07:36.529  WARN [inventory-web,,,] 770 --- [  restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-04-02 21:07:37.099  INFO [inventory-web,,,] 770 --- [  restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/actuator/**'], []
+2020-04-02 21:07:37.101  INFO [inventory-web,,,] 770 --- [  restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/swagger-ui/**', GET], []
+2020-04-02 21:07:37.101  INFO [inventory-web,,,] 770 --- [  restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/topicos', GET], []
+2020-04-02 21:07:37.102  INFO [inventory-web,,,] 770 --- [  restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/topicos/*', GET], []
+2020-04-02 21:07:37.103  INFO [inventory-web,,,] 770 --- [  restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/h2-console/**', GET], []
+2020-04-02 21:07:37.103  INFO [inventory-web,,,] 770 --- [  restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/**.html'], []
+2020-04-02 21:07:37.104  INFO [inventory-web,,,] 770 --- [  restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/v2/api-docs'], []
+2020-04-02 21:07:37.105  INFO [inventory-web,,,] 770 --- [  restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/webjars/**'], []
+2020-04-02 21:07:37.105  INFO [inventory-web,,,] 770 --- [  restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/configuration/**'], []
+2020-04-02 21:07:37.106  INFO [inventory-web,,,] 770 --- [  restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/swagger-resources/**'], []
+2020-04-02 21:07:37.164  INFO [inventory-web,,,] 770 --- [  restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@528ac252, org.springframework.security.web.context.SecurityContextPersistenceFilter@60e5e455, org.springframework.security.web.header.HeaderWriterFilter@5128b554, org.springframework.security.web.authentication.logout.LogoutFilter@77f84293, br.com.inventory.web.config.security.JwtTokenFilter@61cbd137, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@5e43afa6, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@40d7ca2f, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@7e790ef1, org.springframework.security.web.session.SessionManagementFilter@74a08829, org.springframework.security.web.access.ExceptionTranslationFilter@49585329, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@3462ecdb]
+2020-04-02 21:07:37.475  INFO [inventory-web,,,] 770 --- [  restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-04-02 21:07:38.166  INFO [inventory-web,,,] 770 --- [  restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoint(s) beneath base path '/actuator'
+2020-04-02 21:07:38.242  INFO [inventory-web,,,] 770 --- [  restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-04-02 21:07:38.261  INFO [inventory-web,,,] 770 --- [  restartedMain] b.c.i.web.InventoryWebApplication        : Started InventoryWebApplication in 7.857 seconds (JVM running for 8.391)
+2020-04-02 21:08:23.462  INFO [inventory-web,,,] 770 --- [nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-04-02 21:08:23.463  INFO [inventory-web,,,] 770 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-04-02 21:08:23.480  INFO [inventory-web,,,] 770 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 16 ms
+2020-04-02 21:08:23.498  INFO [inventory-web,4e2667f81da3283b,4e2667f81da3283b,false] 770 --- [nio-8080-exec-1] b.c.i.w.config.security.JwtTokenFilter   : Validando Token ...
+2020-04-02 21:08:23.599  INFO [inventory-web,4e2667f81da3283b,4e2667f81da3283b,false] 770 --- [nio-8080-exec-1] b.c.i.web.controller.ProductController   : New Request ... Headers=[content-type:"application/json", user-agent:"PostmanRuntime/7.24.0", accept:"*/*", postman-token:"32662878-d1c7-44c0-a71b-e5fafddb14c7", host:"localhost:8080", accept-encoding:"gzip, deflate, br", connection:"keep-alive", content-length:"79"], Body=ProductRequestDto(description=Galaxy A70, type=ELECTRONICS, amount=1500.50)
+2020-04-02 21:08:23.608  INFO [inventory-web,4e2667f81da3283b,4e2667f81da3283b,false] 770 --- [nio-8080-exec-1] b.c.i.web.controller.ProductController   : Mapping Request...
+2020-04-02 21:08:23.609  INFO [inventory-web,4e2667f81da3283b,4e2667f81da3283b,false] 770 --- [nio-8080-exec-1] b.c.i.web.controller.ProductController   : Request was mapped successfully ... Product(id=null, description=Galaxy A70, type=ELECTRONICS, amount=1500.50)
+2020-04-02 21:08:23.626  INFO [inventory-web,4e2667f81da3283b,4e2667f81da3283b,false] 770 --- [nio-8080-exec-1] b.c.i.web.controller.ProductController   : Creating Product ...
+2020-04-02 21:08:23.680  INFO [inventory-web,4e2667f81da3283b,4e2667f81da3283b,false] 770 --- [nio-8080-exec-1] b.c.i.web.controller.ProductController   : Product was created successfully ...
+2020-04-02 21:08:23.681  INFO [inventory-web,4e2667f81da3283b,4e2667f81da3283b,false] 770 --- [nio-8080-exec-1] b.c.i.web.controller.ProductController   : Mapping Response ...
+2020-04-02 21:08:23.682  INFO [inventory-web,4e2667f81da3283b,4e2667f81da3283b,false] 770 --- [nio-8080-exec-1] b.c.i.web.controller.ProductController   : Response was mapped successfully ... ProductResponseDto(id=1, description=Galaxy A70, type=ELECTRONICS, amount=1500.50)
+2020-04-02 21:08:27.432  INFO [inventory-web,015f18d875a9b278,015f18d875a9b278,false] 770 --- [nio-8080-exec-3] b.c.i.w.config.security.JwtTokenFilter   : Validando Token ...
+2020-04-02 21:08:27.438  INFO [inventory-web,015f18d875a9b278,015f18d875a9b278,false] 770 --- [nio-8080-exec-3] b.c.i.web.controller.ProductController   : New Request ... Headers=[user-agent:"PostmanRuntime/7.24.0", accept:"*/*", postman-token:"2cc75fdf-de11-4ee2-b13d-983019a6846e", host:"localhost:8080", accept-encoding:"gzip, deflate, br", connection:"keep-alive"], PathVariable=[user-agent:"PostmanRuntime/7.24.0", accept:"*/*", postman-token:"2cc75fdf-de11-4ee2-b13d-983019a6846e", host:"localhost:8080", accept-encoding:"gzip, deflate, br", connection:"keep-alive"]
+2020-04-02 21:08:27.439  INFO [inventory-web,015f18d875a9b278,015f18d875a9b278,false] 770 --- [nio-8080-exec-3] b.c.i.web.controller.ProductController   : Search for Product ...
+2020-04-02 21:08:27.459  WARN [inventory-web,015f18d875a9b278,015f18d875a9b278,false] 770 --- [nio-8080-exec-3] b.c.i.web.controller.ProductController   : Product 1 found ...
+2020-04-02 21:08:27.460  INFO [inventory-web,015f18d875a9b278,015f18d875a9b278,false] 770 --- [nio-8080-exec-3] b.c.i.web.controller.ProductController   : Mapping Response ...
+2020-04-02 21:08:27.461  INFO [inventory-web,015f18d875a9b278,015f18d875a9b278,false] 770 --- [nio-8080-exec-3] b.c.i.web.controller.ProductController   : Response was mapped successfully ... ProductResponseDto(id=1, description=Galaxy A70, type=ELECTRONICS, amount=1500.50)
+2020-04-02 21:09:06.164  INFO [inventory-web,,,] 770 --- [extShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-04-02 21:09:06.168  INFO [inventory-web,,,] 770 --- [extShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-04-02 21:09:06.169  INFO [inventory-web,,,] 770 --- [extShutdownHook] .SchemaDropperImpl$DelayedDropActionImpl : HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+2020-04-02 21:09:06.392  WARN [inventory-web,,,] 770 --- [extShutdownHook] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-200]
+2020-04-02 21:09:06.395  INFO [inventory-web,,,] 770 --- [extShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2020-04-02 21:09:06.406  INFO [inventory-web,,,] 770 --- [extShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
