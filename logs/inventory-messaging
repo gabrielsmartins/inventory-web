@@ -1,0 +1,427 @@
+2020-04-11 22:00:23.511 ERROR [inventory-messaging,,,] 23564 --- [  restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+java.lang.IllegalStateException: Logback configuration error detected: 
+ERROR in ch.qos.logback.core.joran.action.NestedComplexPropertyIA - Could not create component [encoder] of type [net.logstash.logback.encoder.LoggingEventCompositeJsonEncoder] java.lang.ClassNotFoundException: net.logstash.logback.encoder.LoggingEventCompositeJsonEncoder
+ERROR in ch.qos.logback.core.joran.spi.Interpreter@46:24 - no applicable action for [providers], current ElementPath  is [[configuration][appender][encoder][providers]]
+ERROR in ch.qos.logback.core.joran.spi.Interpreter@47:28 - no applicable action for [timestamp], current ElementPath  is [[configuration][appender][encoder][providers][timestamp]]
+ERROR in ch.qos.logback.core.joran.spi.Interpreter@48:31 - no applicable action for [timeZone], current ElementPath  is [[configuration][appender][encoder][providers][timestamp][timeZone]]
+ERROR in ch.qos.logback.core.joran.spi.Interpreter@50:26 - no applicable action for [pattern], current ElementPath  is [[configuration][appender][encoder][providers][pattern]]
+ERROR in ch.qos.logback.core.joran.spi.Interpreter@51:30 - no applicable action for [pattern], current ElementPath  is [[configuration][appender][encoder][providers][pattern][pattern]]
+ERROR in ch.qos.logback.core.rolling.RollingFileAppender[logstash] - No encoder set for the appender named "logstash".
+	at org.springframework.boot.logging.logback.LogbackLoggingSystem.loadConfiguration(LogbackLoggingSystem.java:169)
+	at org.springframework.boot.logging.AbstractLoggingSystem.initializeWithConventions(AbstractLoggingSystem.java:80)
+	at org.springframework.boot.logging.AbstractLoggingSystem.initialize(AbstractLoggingSystem.java:60)
+	at org.springframework.boot.logging.logback.LogbackLoggingSystem.initialize(LogbackLoggingSystem.java:118)
+	at org.springframework.boot.context.logging.LoggingApplicationListener.initializeSystem(LoggingApplicationListener.java:313)
+	at org.springframework.boot.context.logging.LoggingApplicationListener.initialize(LoggingApplicationListener.java:288)
+	at org.springframework.boot.context.logging.LoggingApplicationListener.onApplicationEnvironmentPreparedEvent(LoggingApplicationListener.java:246)
+	at org.springframework.boot.context.logging.LoggingApplicationListener.onApplicationEvent(LoggingApplicationListener.java:223)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:172)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:165)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:139)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:127)
+	at org.springframework.boot.context.event.EventPublishingRunListener.environmentPrepared(EventPublishingRunListener.java:76)
+	at org.springframework.boot.SpringApplicationRunListeners.environmentPrepared(SpringApplicationRunListeners.java:53)
+	at org.springframework.boot.SpringApplication.prepareEnvironment(SpringApplication.java:345)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308)
+	at org.springframework.boot.builder.SpringApplicationBuilder.run(SpringApplicationBuilder.java:140)
+	at org.springframework.cloud.bootstrap.BootstrapApplicationListener.bootstrapServiceContext(BootstrapApplicationListener.java:212)
+	at org.springframework.cloud.bootstrap.BootstrapApplicationListener.onApplicationEvent(BootstrapApplicationListener.java:117)
+	at org.springframework.cloud.bootstrap.BootstrapApplicationListener.onApplicationEvent(BootstrapApplicationListener.java:74)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:172)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:165)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:139)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:127)
+	at org.springframework.boot.context.event.EventPublishingRunListener.environmentPrepared(EventPublishingRunListener.java:76)
+	at org.springframework.boot.SpringApplicationRunListeners.environmentPrepared(SpringApplicationRunListeners.java:53)
+	at org.springframework.boot.SpringApplication.prepareEnvironment(SpringApplication.java:345)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1215)
+	at br.com.inventory.messaging.InventoryMessageApplication.main(InventoryMessageApplication.java:10)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+
+2020-04-11 22:00:23.515 ERROR [inventory-messaging,,,] 23564 --- [  restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+java.lang.IllegalStateException: Logback configuration error detected: 
+ERROR in ch.qos.logback.core.joran.action.NestedComplexPropertyIA - Could not create component [encoder] of type [net.logstash.logback.encoder.LoggingEventCompositeJsonEncoder] java.lang.ClassNotFoundException: net.logstash.logback.encoder.LoggingEventCompositeJsonEncoder
+ERROR in ch.qos.logback.core.joran.spi.Interpreter@46:24 - no applicable action for [providers], current ElementPath  is [[configuration][appender][encoder][providers]]
+ERROR in ch.qos.logback.core.joran.spi.Interpreter@47:28 - no applicable action for [timestamp], current ElementPath  is [[configuration][appender][encoder][providers][timestamp]]
+ERROR in ch.qos.logback.core.joran.spi.Interpreter@48:31 - no applicable action for [timeZone], current ElementPath  is [[configuration][appender][encoder][providers][timestamp][timeZone]]
+ERROR in ch.qos.logback.core.joran.spi.Interpreter@50:26 - no applicable action for [pattern], current ElementPath  is [[configuration][appender][encoder][providers][pattern]]
+ERROR in ch.qos.logback.core.joran.spi.Interpreter@51:30 - no applicable action for [pattern], current ElementPath  is [[configuration][appender][encoder][providers][pattern][pattern]]
+ERROR in ch.qos.logback.core.rolling.RollingFileAppender[logstash] - No encoder set for the appender named "logstash".
+	at org.springframework.boot.logging.logback.LogbackLoggingSystem.loadConfiguration(LogbackLoggingSystem.java:169)
+	at org.springframework.boot.logging.AbstractLoggingSystem.initializeWithConventions(AbstractLoggingSystem.java:80)
+	at org.springframework.boot.logging.AbstractLoggingSystem.initialize(AbstractLoggingSystem.java:60)
+	at org.springframework.boot.logging.logback.LogbackLoggingSystem.initialize(LogbackLoggingSystem.java:118)
+	at org.springframework.boot.context.logging.LoggingApplicationListener.initializeSystem(LoggingApplicationListener.java:313)
+	at org.springframework.boot.context.logging.LoggingApplicationListener.initialize(LoggingApplicationListener.java:288)
+	at org.springframework.boot.context.logging.LoggingApplicationListener.onApplicationEnvironmentPreparedEvent(LoggingApplicationListener.java:246)
+	at org.springframework.boot.context.logging.LoggingApplicationListener.onApplicationEvent(LoggingApplicationListener.java:223)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:172)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:165)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:139)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:127)
+	at org.springframework.boot.context.event.EventPublishingRunListener.environmentPrepared(EventPublishingRunListener.java:76)
+	at org.springframework.boot.SpringApplicationRunListeners.environmentPrepared(SpringApplicationRunListeners.java:53)
+	at org.springframework.boot.SpringApplication.prepareEnvironment(SpringApplication.java:345)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308)
+	at org.springframework.boot.builder.SpringApplicationBuilder.run(SpringApplicationBuilder.java:140)
+	at org.springframework.cloud.bootstrap.BootstrapApplicationListener.bootstrapServiceContext(BootstrapApplicationListener.java:212)
+	at org.springframework.cloud.bootstrap.BootstrapApplicationListener.onApplicationEvent(BootstrapApplicationListener.java:117)
+	at org.springframework.cloud.bootstrap.BootstrapApplicationListener.onApplicationEvent(BootstrapApplicationListener.java:74)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:172)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:165)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:139)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:127)
+	at org.springframework.boot.context.event.EventPublishingRunListener.environmentPrepared(EventPublishingRunListener.java:76)
+	at org.springframework.boot.SpringApplicationRunListeners.environmentPrepared(SpringApplicationRunListeners.java:53)
+	at org.springframework.boot.SpringApplication.prepareEnvironment(SpringApplication.java:345)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1215)
+	at br.com.inventory.messaging.InventoryMessageApplication.main(InventoryMessageApplication.java:10)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+
+2020-04-11 22:01:28.221  INFO [inventory-messaging,,,] 23668 --- [  restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-04-11 22:01:28.694  INFO [inventory-messaging,,,] 23668 --- [  restartedMain] b.c.i.m.InventoryMessageApplication      : No active profile set, falling back to default profiles: default
+2020-04-11 22:01:29.565  INFO [inventory-messaging,,,] 23668 --- [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-04-11 22:01:29.578  INFO [inventory-messaging,,,] 23668 --- [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 4ms. Found 0 JPA repository interfaces.
+2020-04-11 22:01:30.010  INFO [inventory-messaging,,,] 23668 --- [  restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=84d8ced7-da05-3cd8-b7d9-0311f48607eb
+2020-04-11 22:01:30.147  INFO [inventory-messaging,,,] 23668 --- [  restartedMain] faultConfiguringBeanFactoryPostProcessor : No bean named 'errorChannel' has been explicitly defined. Therefore, a default PublishSubscribeChannel will be created.
+2020-04-11 22:01:30.153  INFO [inventory-messaging,,,] 23668 --- [  restartedMain] faultConfiguringBeanFactoryPostProcessor : No bean named 'taskScheduler' has been explicitly defined. Therefore, a default ThreadPoolTaskScheduler will be created.
+2020-04-11 22:01:30.158  INFO [inventory-messaging,,,] 23668 --- [  restartedMain] faultConfiguringBeanFactoryPostProcessor : No bean named 'integrationHeaderChannelRegistry' has been explicitly defined. Therefore, a default DefaultHeaderChannelRegistry will be created.
+2020-04-11 22:01:30.575  INFO [inventory-messaging,,,] 23668 --- [  restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'integrationChannelResolver' of type [org.springframework.integration.support.channel.BeanFactoryChannelResolver] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-04-11 22:01:30.579  INFO [inventory-messaging,,,] 23668 --- [  restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'integrationDisposableAutoCreatedBeans' of type [org.springframework.integration.config.annotation.Disposables] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-04-11 22:01:30.616  INFO [inventory-messaging,,,] 23668 --- [  restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.integration.config.IntegrationManagementConfiguration' of type [org.springframework.integration.config.IntegrationManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-04-11 22:01:30.660  INFO [inventory-messaging,,,] 23668 --- [  restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.stream.config.BindersHealthIndicatorAutoConfiguration' of type [org.springframework.cloud.stream.config.BindersHealthIndicatorAutoConfiguration$$EnhancerBySpringCGLIB$$ae125d16] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-04-11 22:01:30.679  INFO [inventory-messaging,,,] 23668 --- [  restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'bindersHealthContributor' of type [org.springframework.cloud.stream.config.BindersHealthIndicatorAutoConfiguration$BindersHealthContributor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-04-11 22:01:30.688  INFO [inventory-messaging,,,] 23668 --- [  restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'bindersHealthIndicatorListener' of type [org.springframework.cloud.stream.config.BindersHealthIndicatorAutoConfiguration$BindersHealthIndicatorListener] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-04-11 22:01:30.702  INFO [inventory-messaging,,,] 23668 --- [  restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.stream.binder.kafka.config.ExtendedBindingHandlerMappingsProviderConfiguration' of type [org.springframework.cloud.stream.binder.kafka.config.ExtendedBindingHandlerMappingsProviderConfiguration$$EnhancerBySpringCGLIB$$5965dcab] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-04-11 22:01:30.710  INFO [inventory-messaging,,,] 23668 --- [  restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'kafkaExtendedPropertiesDefaultMappingsProvider' of type [org.springframework.cloud.stream.binder.kafka.config.ExtendedBindingHandlerMappingsProviderConfiguration$$Lambda$401/0x00000008404a8040] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-04-11 22:01:30.723  INFO [inventory-messaging,,,] 23668 --- [  restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'BindingHandlerAdvise' of type [org.springframework.cloud.stream.config.BindingHandlerAdvise] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-04-11 22:01:30.730  INFO [inventory-messaging,,,] 23668 --- [  restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.stream.binder.kafka.streams.KafkaStreamsBinderSupportAutoConfiguration' of type [org.springframework.cloud.stream.binder.kafka.streams.KafkaStreamsBinderSupportAutoConfiguration$$EnhancerBySpringCGLIB$$cc0dfb5f] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-04-11 22:01:30.750  INFO [inventory-messaging,,,] 23668 --- [  restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'encodingDecodingBindAdviceHandler' of type [org.springframework.cloud.stream.binder.kafka.streams.EncodingDecodingBindAdviceHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-04-11 22:01:30.772  INFO [inventory-messaging,,,] 23668 --- [  restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'spelConverter' of type [org.springframework.cloud.stream.config.SpelExpressionConverterConfiguration$SpelConverter] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-04-11 22:01:30.778  INFO [inventory-messaging,,,] 23668 --- [  restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'spring.sleuth-org.springframework.cloud.sleuth.autoconfig.SleuthProperties' of type [org.springframework.cloud.sleuth.autoconfig.SleuthProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-04-11 22:01:30.783  INFO [inventory-messaging,,,] 23668 --- [  restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'spring.sleuth.propagation.tag-org.springframework.cloud.sleuth.propagation.SleuthTagPropagationProperties' of type [org.springframework.cloud.sleuth.propagation.SleuthTagPropagationProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-04-11 22:01:30.786  INFO [inventory-messaging,,,] 23668 --- [  restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'sleuthFinishedSpanHandler' of type [org.springframework.cloud.sleuth.propagation.TagPropagationFinishedSpanHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-04-11 22:01:30.793  INFO [inventory-messaging,,,] 23668 --- [  restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'spring.sleuth.log.slf4j-org.springframework.cloud.sleuth.log.SleuthSlf4jProperties' of type [org.springframework.cloud.sleuth.log.SleuthSlf4jProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-04-11 22:01:30.796  INFO [inventory-messaging,,,] 23668 --- [  restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'slf4jSpanDecorator' of type [org.springframework.cloud.sleuth.log.Slf4jScopeDecorator] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-04-11 22:01:30.805  INFO [inventory-messaging,,,] 23668 --- [  restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.sleuth.autoconfig.TraceAutoConfiguration' of type [org.springframework.cloud.sleuth.autoconfig.TraceAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-04-11 22:01:30.816  INFO [inventory-messaging,,,] 23668 --- [  restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'sleuthPropagation' of type [brave.propagation.B3Propagation$Factory] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-04-11 22:01:30.824  INFO [inventory-messaging,,,] 23668 --- [  restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'sleuthCurrentTraceContextBuilder' of type [brave.propagation.ThreadLocalCurrentTraceContext$Builder] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-04-11 22:01:30.827  INFO [inventory-messaging,,,] 23668 --- [  restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'sleuthCurrentTraceContext' of type [brave.propagation.ThreadLocalCurrentTraceContext] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-04-11 22:01:30.830  INFO [inventory-messaging,,,] 23668 --- [  restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'sleuthTraceSampler' of type [brave.sampler.Sampler$2] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-04-11 22:01:30.833  INFO [inventory-messaging,,,] 23668 --- [  restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'errorParser' of type [brave.ErrorParser] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-04-11 22:01:30.839  INFO [inventory-messaging,,,] 23668 --- [  restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'noOpSpanReporter' of type [zipkin2.reporter.Reporter$1] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-04-11 22:01:30.848  INFO [inventory-messaging,,,] 23668 --- [  restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'tracing' of type [brave.Tracing$Default] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-04-11 22:01:30.861  INFO [inventory-messaging,,,] 23668 --- [  restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'kafkaStreamsTracing' of type [brave.kafka.streams.KafkaStreamsTracing] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-04-11 22:01:31.140  INFO [inventory-messaging,,,] 23668 --- [  restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-04-11 22:01:31.357  INFO [inventory-messaging,,,] 23668 --- [  restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-04-11 22:01:31.422  INFO [inventory-messaging,,,] 23668 --- [  restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-04-11 22:01:31.493  INFO [inventory-messaging,,,] 23668 --- [  restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 1.0.0-SNAPSHOT
+2020-04-11 22:01:31.611  INFO [inventory-messaging,,,] 23668 --- [  restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-04-11 22:01:31.775  INFO [inventory-messaging,,,] 23668 --- [  restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2020-04-11 22:01:32.140  INFO [inventory-messaging,,,] 23668 --- [  restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-04-11 22:01:32.152  INFO [inventory-messaging,,,] 23668 --- [  restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-04-11 22:01:32.235  INFO [inventory-messaging,,,] 23668 --- [  restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-04-11 22:01:32.569  INFO [inventory-messaging,,,] 23668 --- [  restartedMain] onConfiguration$FunctionBindingRegistrar : Functional binding is disabled due to the presense of @EnableBinding annotation in your configuration
+2020-04-11 22:01:32.603  INFO [inventory-messaging,,,] 23668 --- [  restartedMain] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'taskScheduler'
+2020-04-11 22:01:33.597  INFO [inventory-messaging,,,] 23668 --- [  restartedMain] o.s.c.s.m.DirectWithAttributesChannel    : Channel 'inventory-messaging-1.input' has 1 subscriber(s).
+2020-04-11 22:01:33.619  INFO [inventory-messaging,,,] 23668 --- [  restartedMain] o.s.i.endpoint.EventDrivenConsumer       : Adding {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
+2020-04-11 22:01:33.620  INFO [inventory-messaging,,,] 23668 --- [  restartedMain] o.s.i.channel.PublishSubscribeChannel    : Channel 'inventory-messaging-1.errorChannel' has 1 subscriber(s).
+2020-04-11 22:01:33.621  INFO [inventory-messaging,,,] 23668 --- [  restartedMain] o.s.i.endpoint.EventDrivenConsumer       : started bean '_org.springframework.integration.errorLogger'
+2020-04-11 22:01:33.955  INFO [inventory-messaging,,,] 23668 --- [  restartedMain] o.a.k.clients.admin.AdminClientConfig    : AdminClientConfig values: 
+	bootstrap.servers = [localhost:9092]
+	client.dns.lookup = default
+	client.id = 
+	connections.max.idle.ms = 300000
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 120000
+	retries = 5
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	send.buffer.bytes = 131072
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.1, TLSv1]
+	ssl.endpoint.identification.algorithm = https
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLS
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+
+2020-04-11 22:01:34.079  INFO [inventory-messaging,,,] 23668 --- [  restartedMain] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 2.3.1
+2020-04-11 22:01:34.080  INFO [inventory-messaging,,,] 23668 --- [  restartedMain] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: 18a913733fb71c01
+2020-04-11 22:01:34.081  INFO [inventory-messaging,,,] 23668 --- [  restartedMain] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1586653294078
+2020-04-11 22:01:34.955  INFO [inventory-messaging,,,] 23668 --- [  restartedMain] o.a.k.clients.consumer.ConsumerConfig    : ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 100
+	auto.offset.reset = earliest
+	bootstrap.servers = [localhost:9092]
+	check.crcs = true
+	client.dns.lookup = default
+	client.id = 
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = inventory-messaging-group
+	group.instance.id = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.ByteArrayDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	send.buffer.bytes = 131072
+	session.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.1, TLSv1]
+	ssl.endpoint.identification.algorithm = https
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLS
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.ByteArrayDeserializer
+
+2020-04-11 22:01:35.009  INFO [inventory-messaging,,,] 23668 --- [  restartedMain] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 2.3.1
+2020-04-11 22:01:35.010  INFO [inventory-messaging,,,] 23668 --- [  restartedMain] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: 18a913733fb71c01
+2020-04-11 22:01:35.011  INFO [inventory-messaging,,,] 23668 --- [  restartedMain] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1586653295009
+2020-04-11 22:01:35.057  INFO [inventory-messaging,,,] 23668 --- [  restartedMain] o.s.c.stream.binder.BinderErrorChannel   : Channel 'ECOMMERCE_NEW_ORDER.inventory-messaging-group.errors' has 1 subscriber(s).
+2020-04-11 22:01:35.058  INFO [inventory-messaging,,,] 23668 --- [  restartedMain] o.s.c.stream.binder.BinderErrorChannel   : Channel 'ECOMMERCE_NEW_ORDER.inventory-messaging-group.errors' has 0 subscriber(s).
+2020-04-11 22:01:35.062  INFO [inventory-messaging,,,] 23668 --- [  restartedMain] o.s.c.stream.binder.BinderErrorChannel   : Channel 'ECOMMERCE_NEW_ORDER.inventory-messaging-group.errors' has 1 subscriber(s).
+2020-04-11 22:01:35.063  INFO [inventory-messaging,,,] 23668 --- [  restartedMain] o.s.c.stream.binder.BinderErrorChannel   : Channel 'ECOMMERCE_NEW_ORDER.inventory-messaging-group.errors' has 2 subscriber(s).
+2020-04-11 22:01:35.081  INFO [inventory-messaging,,,] 23668 --- [  restartedMain] o.a.k.clients.consumer.ConsumerConfig    : ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 100
+	auto.offset.reset = earliest
+	bootstrap.servers = [localhost:9092]
+	check.crcs = true
+	client.dns.lookup = default
+	client.id = 
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = inventory-messaging-group
+	group.instance.id = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.ByteArrayDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	send.buffer.bytes = 131072
+	session.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.1, TLSv1]
+	ssl.endpoint.identification.algorithm = https
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLS
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.ByteArrayDeserializer
+
+2020-04-11 22:01:35.089  INFO [inventory-messaging,,,] 23668 --- [  restartedMain] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 2.3.1
+2020-04-11 22:01:35.090  INFO [inventory-messaging,,,] 23668 --- [  restartedMain] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: 18a913733fb71c01
+2020-04-11 22:01:35.090  INFO [inventory-messaging,,,] 23668 --- [  restartedMain] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1586653295089
+2020-04-11 22:01:35.092  INFO [inventory-messaging,,,] 23668 --- [  restartedMain] o.a.k.clients.consumer.KafkaConsumer     : [Consumer clientId=consumer-2, groupId=inventory-messaging-group] Subscribed to topic(s): ECOMMERCE_NEW_ORDER
+2020-04-11 22:01:35.094  INFO [inventory-messaging,,,] 23668 --- [  restartedMain] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService
+2020-04-11 22:01:35.109  INFO [inventory-messaging,,,] 23668 --- [  restartedMain] s.i.k.i.KafkaMessageDrivenChannelAdapter : started org.springframework.integration.kafka.inbound.KafkaMessageDrivenChannelAdapter@43f3fb9
+2020-04-11 22:01:35.139  INFO [inventory-messaging,,,] 23668 --- [container-0-C-1] org.apache.kafka.clients.Metadata        : [Consumer clientId=consumer-2, groupId=inventory-messaging-group] Cluster ID: TguWnJ1uTF-i8gOtOuvt6Q
+2020-04-11 22:01:35.211  INFO [inventory-messaging,,,] 23668 --- [  restartedMain] b.c.i.m.InventoryMessageApplication      : Started InventoryMessageApplication in 7.909 seconds (JVM running for 8.469)
+2020-04-11 22:01:40.517  INFO [inventory-messaging,,,] 23668 --- [container-0-C-1] o.a.k.c.c.internals.AbstractCoordinator  : [Consumer clientId=consumer-2, groupId=inventory-messaging-group] Discovered group coordinator home-pc:9092 (id: 2147483647 rack: null)
+2020-04-11 22:01:40.520  INFO [inventory-messaging,,,] 23668 --- [container-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-2, groupId=inventory-messaging-group] Revoking previously assigned partitions []
+2020-04-11 22:01:40.521  INFO [inventory-messaging,,,] 23668 --- [container-0-C-1] o.s.c.s.b.k.KafkaMessageChannelBinder$1  : inventory-messaging-group: partitions revoked: []
+2020-04-11 22:01:40.521  INFO [inventory-messaging,,,] 23668 --- [container-0-C-1] o.a.k.c.c.internals.AbstractCoordinator  : [Consumer clientId=consumer-2, groupId=inventory-messaging-group] (Re-)joining group
+2020-04-11 22:01:40.546  INFO [inventory-messaging,,,] 23668 --- [container-0-C-1] o.a.k.c.c.internals.AbstractCoordinator  : [Consumer clientId=consumer-2, groupId=inventory-messaging-group] (Re-)joining group
+2020-04-11 22:01:40.722  INFO [inventory-messaging,,,] 23668 --- [container-0-C-1] o.a.k.c.c.internals.AbstractCoordinator  : [Consumer clientId=consumer-2, groupId=inventory-messaging-group] Successfully joined group with generation 1
+2020-04-11 22:01:40.729  INFO [inventory-messaging,,,] 23668 --- [container-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-2, groupId=inventory-messaging-group] Setting newly assigned partitions: ECOMMERCE_NEW_ORDER-0
+2020-04-11 22:01:40.744  INFO [inventory-messaging,,,] 23668 --- [container-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-2, groupId=inventory-messaging-group] Found no committed offset for partition ECOMMERCE_NEW_ORDER-0
+2020-04-11 22:01:40.759  INFO [inventory-messaging,,,] 23668 --- [container-0-C-1] o.a.k.c.c.internals.SubscriptionState    : [Consumer clientId=consumer-2, groupId=inventory-messaging-group] Resetting offset for partition ECOMMERCE_NEW_ORDER-0 to offset 0.
+2020-04-11 22:01:40.783  INFO [inventory-messaging,,,] 23668 --- [container-0-C-1] o.s.c.s.b.k.KafkaMessageChannelBinder$1  : inventory-messaging-group: partitions assigned: [ECOMMERCE_NEW_ORDER-0]
+2020-04-11 22:02:36.857  INFO [inventory-messaging,bcbc7c656d305e7c,bcbc7c656d305e7c,false] 23668 --- [container-0-C-1] b.c.i.messaging.receiver.OrderConsumer   : Receiving message: 150000,244550.50
+2020-04-11 22:02:37.398  INFO [inventory-messaging,266b37f030be45b2,266b37f030be45b2,false] 23668 --- [container-0-C-1] b.c.i.messaging.receiver.OrderConsumer   : Receiving message: 150000,244550.50
+2020-04-11 22:02:37.448  INFO [inventory-messaging,ac9308ba4bc58160,ac9308ba4bc58160,false] 23668 --- [container-0-C-1] b.c.i.messaging.receiver.OrderConsumer   : Receiving message: 150000,244550.50
+2020-04-11 22:02:37.501  INFO [inventory-messaging,8c46e61b84809a0f,8c46e61b84809a0f,false] 23668 --- [container-0-C-1] b.c.i.messaging.receiver.OrderConsumer   : Receiving message: 150000,244550.50
+2020-04-11 22:02:37.548  INFO [inventory-messaging,7d420f412f1376ec,7d420f412f1376ec,false] 23668 --- [container-0-C-1] b.c.i.messaging.receiver.OrderConsumer   : Receiving message: 150000,244550.50
+2020-04-11 22:02:37.608  INFO [inventory-messaging,b8387c23e1d5fe78,b8387c23e1d5fe78,false] 23668 --- [container-0-C-1] b.c.i.messaging.receiver.OrderConsumer   : Receiving message: 150000,244550.50
+2020-04-11 22:02:37.658  INFO [inventory-messaging,0520e1fc0ea06c7d,0520e1fc0ea06c7d,false] 23668 --- [container-0-C-1] b.c.i.messaging.receiver.OrderConsumer   : Receiving message: 150000,244550.50
+2020-04-11 22:02:37.696  INFO [inventory-messaging,6f9cd2414d6fa3b4,6f9cd2414d6fa3b4,false] 23668 --- [container-0-C-1] b.c.i.messaging.receiver.OrderConsumer   : Receiving message: 150000,244550.50
+2020-04-11 22:02:37.730  INFO [inventory-messaging,ba4dab27bc3840a2,ba4dab27bc3840a2,false] 23668 --- [container-0-C-1] b.c.i.messaging.receiver.OrderConsumer   : Receiving message: 150000,244550.50
+2020-04-11 22:02:37.776  INFO [inventory-messaging,01051ba6b4ae18ec,01051ba6b4ae18ec,false] 23668 --- [container-0-C-1] b.c.i.messaging.receiver.OrderConsumer   : Receiving message: 150000,244550.50
+2020-04-11 22:02:37.804  INFO [inventory-messaging,4c8c48bde91136db,4c8c48bde91136db,false] 23668 --- [container-0-C-1] b.c.i.messaging.receiver.OrderConsumer   : Receiving message: 150000,244550.50
+2020-04-11 22:02:37.831  INFO [inventory-messaging,edd75a7aaa1f2b16,edd75a7aaa1f2b16,false] 23668 --- [container-0-C-1] b.c.i.messaging.receiver.OrderConsumer   : Receiving message: 150000,244550.50
+2020-04-11 22:02:37.862  INFO [inventory-messaging,af69c56595110d9e,af69c56595110d9e,false] 23668 --- [container-0-C-1] b.c.i.messaging.receiver.OrderConsumer   : Receiving message: 150000,244550.50
+2020-04-11 22:02:37.903  INFO [inventory-messaging,7d69efde7aaeaa5f,7d69efde7aaeaa5f,false] 23668 --- [container-0-C-1] b.c.i.messaging.receiver.OrderConsumer   : Receiving message: 150000,244550.50
+2020-04-11 22:02:37.947  INFO [inventory-messaging,8e47b3bc09056bc7,8e47b3bc09056bc7,false] 23668 --- [container-0-C-1] b.c.i.messaging.receiver.OrderConsumer   : Receiving message: 150000,244550.50
+2020-04-11 22:02:37.993  INFO [inventory-messaging,18beb7b0eb155882,18beb7b0eb155882,false] 23668 --- [container-0-C-1] b.c.i.messaging.receiver.OrderConsumer   : Receiving message: 150000,244550.50
+2020-04-11 22:02:38.053  INFO [inventory-messaging,77359d5274497516,77359d5274497516,false] 23668 --- [container-0-C-1] b.c.i.messaging.receiver.OrderConsumer   : Receiving message: 150000,244550.50
+2020-04-11 22:02:38.115  INFO [inventory-messaging,dc3247a71589d38d,dc3247a71589d38d,false] 23668 --- [container-0-C-1] b.c.i.messaging.receiver.OrderConsumer   : Receiving message: 150000,244550.50
+2020-04-11 22:02:38.159  INFO [inventory-messaging,558eca31a5ad54fc,558eca31a5ad54fc,false] 23668 --- [container-0-C-1] b.c.i.messaging.receiver.OrderConsumer   : Receiving message: 150000,244550.50
+2020-04-11 22:02:38.209  INFO [inventory-messaging,6477de3703a330ec,6477de3703a330ec,false] 23668 --- [container-0-C-1] b.c.i.messaging.receiver.OrderConsumer   : Receiving message: 150000,244550.50
+2020-04-11 22:02:38.262  INFO [inventory-messaging,bfc3dd2ca86a15e1,bfc3dd2ca86a15e1,false] 23668 --- [container-0-C-1] b.c.i.messaging.receiver.OrderConsumer   : Receiving message: 150000,244550.50
+2020-04-11 22:02:38.296  INFO [inventory-messaging,08e0d142f470bd84,08e0d142f470bd84,false] 23668 --- [container-0-C-1] b.c.i.messaging.receiver.OrderConsumer   : Receiving message: 150000,244550.50
+2020-04-11 22:02:38.371  INFO [inventory-messaging,0812ff5266260c6d,0812ff5266260c6d,false] 23668 --- [container-0-C-1] b.c.i.messaging.receiver.OrderConsumer   : Receiving message: 150000,244550.50
+2020-04-11 22:02:38.421  INFO [inventory-messaging,c21ad5c8462b281b,c21ad5c8462b281b,false] 23668 --- [container-0-C-1] b.c.i.messaging.receiver.OrderConsumer   : Receiving message: 150000,244550.50
+2020-04-11 22:02:38.481  INFO [inventory-messaging,9be26093f472e741,9be26093f472e741,false] 23668 --- [container-0-C-1] b.c.i.messaging.receiver.OrderConsumer   : Receiving message: 150000,244550.50
+2020-04-11 22:02:38.537  INFO [inventory-messaging,230c4fa16353c471,230c4fa16353c471,false] 23668 --- [container-0-C-1] b.c.i.messaging.receiver.OrderConsumer   : Receiving message: 150000,244550.50
+2020-04-11 22:02:38.587  INFO [inventory-messaging,0059b59410101f3a,0059b59410101f3a,false] 23668 --- [container-0-C-1] b.c.i.messaging.receiver.OrderConsumer   : Receiving message: 150000,244550.50
+2020-04-11 22:02:38.632  INFO [inventory-messaging,8023dc7dfac68ad1,8023dc7dfac68ad1,false] 23668 --- [container-0-C-1] b.c.i.messaging.receiver.OrderConsumer   : Receiving message: 150000,244550.50
+2020-04-11 22:02:38.666  INFO [inventory-messaging,358ff2876f17ec74,358ff2876f17ec74,false] 23668 --- [container-0-C-1] b.c.i.messaging.receiver.OrderConsumer   : Receiving message: 150000,244550.50
+2020-04-11 22:02:38.711  INFO [inventory-messaging,702e54b02efd4e02,702e54b02efd4e02,false] 23668 --- [container-0-C-1] b.c.i.messaging.receiver.OrderConsumer   : Receiving message: 150000,244550.50
+2020-04-11 22:02:38.760  INFO [inventory-messaging,81f24249c994c3e4,81f24249c994c3e4,false] 23668 --- [container-0-C-1] b.c.i.messaging.receiver.OrderConsumer   : Receiving message: 150000,244550.50
+2020-04-11 22:02:38.813  INFO [inventory-messaging,cee345ce28ca5f98,cee345ce28ca5f98,false] 23668 --- [container-0-C-1] b.c.i.messaging.receiver.OrderConsumer   : Receiving message: 150000,244550.50
+2020-04-11 22:02:38.858  INFO [inventory-messaging,f431abcc6680c99a,f431abcc6680c99a,false] 23668 --- [container-0-C-1] b.c.i.messaging.receiver.OrderConsumer   : Receiving message: 150000,244550.50
+2020-04-11 22:02:38.889  INFO [inventory-messaging,7efb182f98e1e1d6,7efb182f98e1e1d6,false] 23668 --- [container-0-C-1] b.c.i.messaging.receiver.OrderConsumer   : Receiving message: 150000,244550.50
+2020-04-11 22:02:38.927  INFO [inventory-messaging,e8d24eba01816185,e8d24eba01816185,false] 23668 --- [container-0-C-1] b.c.i.messaging.receiver.OrderConsumer   : Receiving message: 150000,244550.50
+2020-04-11 22:02:38.981  INFO [inventory-messaging,3cc3b7c7034d373c,3cc3b7c7034d373c,false] 23668 --- [container-0-C-1] b.c.i.messaging.receiver.OrderConsumer   : Receiving message: 150000,244550.50
+2020-04-11 22:02:39.021  INFO [inventory-messaging,6b921f55f6432661,6b921f55f6432661,false] 23668 --- [container-0-C-1] b.c.i.messaging.receiver.OrderConsumer   : Receiving message: 150000,244550.50
+2020-04-11 22:02:39.059  INFO [inventory-messaging,aca19814556c9130,aca19814556c9130,false] 23668 --- [container-0-C-1] b.c.i.messaging.receiver.OrderConsumer   : Receiving message: 150000,244550.50
+2020-04-11 22:02:39.093  INFO [inventory-messaging,13c3618a3b041b9a,13c3618a3b041b9a,false] 23668 --- [container-0-C-1] b.c.i.messaging.receiver.OrderConsumer   : Receiving message: 150000,244550.50
+2020-04-11 22:02:39.120  INFO [inventory-messaging,de9aa550c5c704ab,de9aa550c5c704ab,false] 23668 --- [container-0-C-1] b.c.i.messaging.receiver.OrderConsumer   : Receiving message: 150000,244550.50
+2020-04-11 22:02:39.156  INFO [inventory-messaging,c06bfcad153c1bf5,c06bfcad153c1bf5,false] 23668 --- [container-0-C-1] b.c.i.messaging.receiver.OrderConsumer   : Receiving message: 150000,244550.50
+2020-04-11 22:02:39.206  INFO [inventory-messaging,3e7593acb998cf1a,3e7593acb998cf1a,false] 23668 --- [container-0-C-1] b.c.i.messaging.receiver.OrderConsumer   : Receiving message: 150000,244550.50
+2020-04-11 22:02:39.269  INFO [inventory-messaging,da5f3adee9996e23,da5f3adee9996e23,false] 23668 --- [container-0-C-1] b.c.i.messaging.receiver.OrderConsumer   : Receiving message: 150000,244550.50
+2020-04-11 22:02:39.300  INFO [inventory-messaging,f0a78262835f34fc,f0a78262835f34fc,false] 23668 --- [container-0-C-1] b.c.i.messaging.receiver.OrderConsumer   : Receiving message: 150000,244550.50
+2020-04-11 22:02:39.332  INFO [inventory-messaging,4f56da5d247821bd,4f56da5d247821bd,false] 23668 --- [container-0-C-1] b.c.i.messaging.receiver.OrderConsumer   : Receiving message: 150000,244550.50
+2020-04-11 22:02:39.360  INFO [inventory-messaging,111e0cb9caefa2aa,111e0cb9caefa2aa,false] 23668 --- [container-0-C-1] b.c.i.messaging.receiver.OrderConsumer   : Receiving message: 150000,244550.50
+2020-04-11 22:02:39.411  INFO [inventory-messaging,eb8aa5a8fea8277a,eb8aa5a8fea8277a,false] 23668 --- [container-0-C-1] b.c.i.messaging.receiver.OrderConsumer   : Receiving message: 150000,244550.50
+2020-04-11 22:02:39.475  INFO [inventory-messaging,d02f1b5d12f43aae,d02f1b5d12f43aae,false] 23668 --- [container-0-C-1] b.c.i.messaging.receiver.OrderConsumer   : Receiving message: 150000,244550.50
+2020-04-11 22:02:39.513  INFO [inventory-messaging,31c9654260511a3b,31c9654260511a3b,false] 23668 --- [container-0-C-1] b.c.i.messaging.receiver.OrderConsumer   : Receiving message: 150000,244550.50
+2020-04-11 22:02:39.545  INFO [inventory-messaging,3eef4bbaeb88d4af,3eef4bbaeb88d4af,false] 23668 --- [container-0-C-1] b.c.i.messaging.receiver.OrderConsumer   : Receiving message: 150000,244550.50
+2020-04-11 22:07:53.019  INFO [inventory-messaging,,,] 23668 --- [container-0-C-1] o.a.k.c.c.internals.AbstractCoordinator  : [Consumer clientId=consumer-2, groupId=inventory-messaging-group] Member consumer-2-c37d9857-b4c4-4054-8acb-a69a1cbcf884 sending LeaveGroup request to coordinator home-pc:9092 (id: 2147483647 rack: null)
+2020-04-11 22:07:53.021  INFO [inventory-messaging,,,] 23668 --- [container-0-C-1] o.a.k.clients.consumer.KafkaConsumer     : [Consumer clientId=consumer-2, groupId=inventory-messaging-group] Unsubscribed all topics or patterns and assigned partitions
+2020-04-11 22:07:53.021  INFO [inventory-messaging,,,] 23668 --- [container-0-C-1] o.s.s.c.ThreadPoolTaskScheduler          : Shutting down ExecutorService
+2020-04-11 22:07:53.033  INFO [inventory-messaging,,,] 23668 --- [container-0-C-1] essageListenerContainer$ListenerConsumer : inventory-messaging-group: Consumer stopped
+2020-04-11 22:07:53.039  INFO [inventory-messaging,,,] 23668 --- [       Thread-6] s.i.k.i.KafkaMessageDrivenChannelAdapter : stopped org.springframework.integration.kafka.inbound.KafkaMessageDrivenChannelAdapter@43f3fb9
+2020-04-11 22:07:53.086  INFO [inventory-messaging,,,] 23668 --- [       Thread-6] o.s.c.stream.binder.BinderErrorChannel   : Channel 'inventory-messaging-1.ECOMMERCE_NEW_ORDER.inventory-messaging-group.errors' has 1 subscriber(s).
+2020-04-11 22:07:53.088  INFO [inventory-messaging,,,] 23668 --- [       Thread-6] o.s.c.stream.binder.BinderErrorChannel   : Channel 'inventory-messaging-1.ECOMMERCE_NEW_ORDER.inventory-messaging-group.errors' has 0 subscriber(s).
+2020-04-11 22:07:53.090  INFO [inventory-messaging,,,] 23668 --- [       Thread-6] o.s.i.endpoint.EventDrivenConsumer       : Removing {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
+2020-04-11 22:07:53.091  INFO [inventory-messaging,,,] 23668 --- [       Thread-6] o.s.i.channel.PublishSubscribeChannel    : Channel 'inventory-messaging-1.errorChannel' has 0 subscriber(s).
+2020-04-11 22:07:53.092  INFO [inventory-messaging,,,] 23668 --- [       Thread-6] o.s.i.endpoint.EventDrivenConsumer       : stopped bean '_org.springframework.integration.errorLogger'
+2020-04-11 22:07:53.099  INFO [inventory-messaging,,,] 23668 --- [       Thread-6] o.s.s.c.ThreadPoolTaskScheduler          : Shutting down ExecutorService 'taskScheduler'
+2020-04-11 22:07:53.103  INFO [inventory-messaging,,,] 23668 --- [       Thread-6] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-04-11 22:07:53.104  INFO [inventory-messaging,,,] 23668 --- [       Thread-6] .SchemaDropperImpl$DelayedDropActionImpl : HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+2020-04-11 22:07:53.327  WARN [inventory-messaging,,,] 23668 --- [       Thread-6] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-200]
+2020-04-11 22:07:53.328  INFO [inventory-messaging,,,] 23668 --- [       Thread-6] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2020-04-11 22:07:53.332  INFO [inventory-messaging,,,] 23668 --- [       Thread-6] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.

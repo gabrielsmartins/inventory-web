@@ -15,6 +15,9 @@ This project was built using Gradle, so the standard task are required to build.
 == Modules
 There are another modules using this component:
 
-https://spring.io/[Inventory Core]
-https://spring.io/[Inventory MQ]
+
+link:https://github.com/gabrielsmartins/inventory-core[Inventory Core]
+
+link:https://github.com/gabrielsmartins/inventory-messaging[Inventory Messaging]
+
 
