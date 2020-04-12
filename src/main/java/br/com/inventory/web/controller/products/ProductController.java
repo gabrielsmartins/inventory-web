@@ -1,13 +1,13 @@
-package br.com.inventory.web.controller;
+package br.com.inventory.web.controller.products;
 
 
-import br.com.inventory.application.domain.Product;
-import br.com.inventory.application.ports.in.CreateProductUseCase;
-import br.com.inventory.application.ports.in.SearchProductUseCase;
-import br.com.inventory.common.annotations.WebAdapter;
-import br.com.inventory.web.dto.request.ProductRequestDto;
-import br.com.inventory.web.dto.response.ProductResponseDto;
-import br.com.inventory.web.mapper.ProductWebMapper;
+import br.com.inventory.application.domain.products.Product;
+import br.com.inventory.application.ports.in.products.CreateProductUseCase;
+import br.com.inventory.application.ports.in.products.SearchProductUseCase;
+import br.com.inventory.web.dto.request.products.ProductRequestDto;
+import br.com.inventory.web.dto.response.products.ProductResponseDto;
+import br.com.inventory.web.mapper.products.ProductWebMapper;
+import io.swagger.annotations.*;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpHeaders;
@@ -22,8 +22,7 @@ import java.util.Optional;
 
 import static net.logstash.logback.argument.StructuredArguments.keyValue;
 
-
-@WebAdapter
+@Api(value = "Product Controller", description = "Product Controller",  tags = {"Product"})
 @RestController
 @RequestMapping("/products")
 @RequiredArgsConstructor
@@ -34,6 +33,13 @@ public class ProductController {
     private final SearchProductUseCase searchProductUseCase;
     private final ProductWebMapper productWebMapper;
 
+
+    @ApiOperation(value = "Create Product", tags = {"Product"})
+    @ApiResponses(value = {
+            @ApiResponse(code = 201, message = "Created Product"),
+            @ApiResponse(code = 403, message = "Unauthorized"),
+            @ApiResponse(code = 500, message = "Internal Server Error")
+    })
     @PostMapping()
     public ResponseEntity<?> create(@RequestHeader HttpHeaders httpHeaders, @RequestBody  @Valid ProductRequestDto productRequestDto, UriComponentsBuilder uriBuilder){
         log.info("New Request ... {}, {}", keyValue("Headers",httpHeaders),  keyValue("Body",productRequestDto));
@@ -50,6 +56,12 @@ public class ProductController {
         return ResponseEntity.created(uri).body(productResponseDto);
     }
 
+    @ApiOperation(value = "Search Product", tags = {"Product"})
+    @ApiResponses(value = {
+            @ApiResponse(code = 200, message = "Founded Product"),
+            @ApiResponse(code = 403, message = "Unauthorized"),
+            @ApiResponse(code = 500, message = "Internal Server Error")
+    })
     @GetMapping("/{id}")
     public ResponseEntity<?> findById(@PathVariable("id") Long id, @RequestHeader HttpHeaders httpHeaders){
         log.info("New Request ... {}, {}", keyValue("Headers",httpHeaders), keyValue("PathVariable",httpHeaders));

@@ -1,9 +1,10 @@
-package br.com.inventory.web.mapper;
+package br.com.inventory.web.mapper.products;
 
-import br.com.inventory.application.domain.Product;
+
+import br.com.inventory.application.domain.products.Product;
 import br.com.inventory.application.enums.ProductTypeEnum;
-import br.com.inventory.web.dto.request.ProductRequestDto;
-import br.com.inventory.web.dto.response.ProductResponseDto;
+import br.com.inventory.web.dto.request.products.ProductRequestDto;
+import br.com.inventory.web.dto.response.products.ProductResponseDto;
 import org.springframework.stereotype.Component;
 
 @Component

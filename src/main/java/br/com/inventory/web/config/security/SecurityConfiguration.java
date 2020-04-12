@@ -37,6 +37,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 		        .antMatchers(HttpMethod.POST, "/auth").permitAll()
 		        .antMatchers(HttpMethod.GET, "/actuator/**").permitAll()
 		        .antMatchers(HttpMethod.GET, "/swagger-ui/**").permitAll()
+				.antMatchers("/swagger-resources/**").permitAll()
 				.antMatchers(HttpMethod.GET, "/topicos").permitAll()
 				.antMatchers(HttpMethod.GET, "/topicos/*").permitAll()
 				.antMatchers(HttpMethod.GET, "/h2-console/**").permitAll()
@@ -50,6 +51,8 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 	public void configure(WebSecurity web) throws Exception {
 		web.ignoring().antMatchers("/actuator/**");
         web.ignoring().antMatchers(HttpMethod.GET, "/swagger-ui/**");
+		web.ignoring().antMatchers(HttpMethod.GET, "/swagger-resources/**");
+
         web.ignoring().antMatchers(HttpMethod.GET, "/topicos");
         web.ignoring().antMatchers(HttpMethod.GET, "/topicos/*");
         web.ignoring().antMatchers(HttpMethod.GET, "/h2-console/**");

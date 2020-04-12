@@ -8,6 +8,7 @@ group 'br.com.inventory.web'
 version '1.0-SNAPSHOT'
 
 sourceCompatibility = 11
+targetCompatibility = 11
 
 configurations {
     developmentOnly
@@ -24,13 +25,13 @@ repositories {
     jcenter()
 }
 
-
-
 repositories {
     mavenCentral()
 }
 
-
+ext {
+    set('springCloudVersion', "Hoxton.SR3")
+}
 
 
 dependencies {
@@ -65,9 +66,10 @@ dependencies {
 
 dependencyManagement {
     imports {
-        mavenBom 'org.springframework.cloud:spring-cloud-dependencies:Hoxton.SR3'
+        mavenBom "org.springframework.cloud:spring-cloud-dependencies:${springCloudVersion}"
     }
 }
+
 
 test{
     useJUnitPlatform()
