@@ -35,12 +35,8 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 	protected void configure(HttpSecurity http) throws Exception {
 		http.authorizeRequests()
 		        .antMatchers(HttpMethod.POST, "/auth").permitAll()
-		        .antMatchers(HttpMethod.GET, "/actuator/**").permitAll()
-		        .antMatchers(HttpMethod.GET, "/swagger-ui/**").permitAll()
-				.antMatchers("/swagger-resources/**").permitAll()
 				.antMatchers(HttpMethod.GET, "/topicos").permitAll()
 				.antMatchers(HttpMethod.GET, "/topicos/*").permitAll()
-				.antMatchers(HttpMethod.GET, "/h2-console/**").permitAll()
 				.anyRequest().permitAll().and().csrf().disable().sessionManagement()
 				.sessionCreationPolicy(SessionCreationPolicy.STATELESS).and()
 				.addFilterBefore(new JwtTokenFilter(tokenService), UsernamePasswordAuthenticationFilter.class);
@@ -52,10 +48,9 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 		web.ignoring().antMatchers("/actuator/**");
         web.ignoring().antMatchers(HttpMethod.GET, "/swagger-ui/**");
 		web.ignoring().antMatchers(HttpMethod.GET, "/swagger-resources/**");
-
         web.ignoring().antMatchers(HttpMethod.GET, "/topicos");
         web.ignoring().antMatchers(HttpMethod.GET, "/topicos/*");
-        web.ignoring().antMatchers(HttpMethod.GET, "/h2-console/**");
+        web.ignoring().antMatchers("/h2-console/**");
 		web.ignoring().antMatchers("/**.html", "/v2/api-docs", "/webjars/**","/configuration/**", "/swagger-resources/**");
 	}
 
